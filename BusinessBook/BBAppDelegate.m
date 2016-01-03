@@ -6,13 +6,13 @@
 //  Copyright © 2016 Data Empire. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "BBAppDelegate.h"
 
-@interface AppDelegate ()
+@interface BBAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation BBAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
