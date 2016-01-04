@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		532E4D3A1C3AA9FB003F0CF3 /* BBBusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 532E4D391C3AA9FB003F0CF3 /* BBBusinessModel.m */; };
 		53A898F01C39BFDD00D4F125 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A898EF1C39BFDD00D4F125 /* main.m */; };
 		53A898F31C39BFDD00D4F125 /* BBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A898F21C39BFDD00D4F125 /* BBAppDelegate.m */; };
 		53A898F61C39BFDD00D4F125 /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A898F51C39BFDD00D4F125 /* BBViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		532E4D381C3AA9FB003F0CF3 /* BBBusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBusinessModel.h; sourceTree = "<group>"; };
+		532E4D391C3AA9FB003F0CF3 /* BBBusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBusinessModel.m; sourceTree = "<group>"; };
 		53A898EB1C39BFDD00D4F125 /* BusinessBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusinessBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A898EF1C39BFDD00D4F125 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		53A898F11C39BFDD00D4F125 /* BBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBAppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		532E4D371C3AA9AF003F0CF3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				532E4D381C3AA9FB003F0CF3 /* BBBusinessModel.h */,
+				532E4D391C3AA9FB003F0CF3 /* BBBusinessModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		53A898E21C39BFDD00D4F125 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +93,7 @@
 		53A898ED1C39BFDD00D4F125 /* BusinessBook */ = {
 			isa = PBXGroup;
 			children = (
+				532E4D371C3AA9AF003F0CF3 /* Models */,
 				53A898F11C39BFDD00D4F125 /* BBAppDelegate.h */,
 				53A898F21C39BFDD00D4F125 /* BBAppDelegate.m */,
 				53A898F41C39BFDD00D4F125 /* BBViewController.h */,
@@ -216,6 +229,7 @@
 				53A898F61C39BFDD00D4F125 /* BBViewController.m in Sources */,
 				53A898F31C39BFDD00D4F125 /* BBAppDelegate.m in Sources */,
 				53A898F01C39BFDD00D4F125 /* main.m in Sources */,
+				532E4D3A1C3AA9FB003F0CF3 /* BBBusinessModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +416,7 @@
 				53A8990F1C39BFDD00D4F125 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53A899101C39BFDD00D4F125 /* Build configuration list for PBXNativeTarget "BusinessBookTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +425,7 @@
 				53A899121C39BFDD00D4F125 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
