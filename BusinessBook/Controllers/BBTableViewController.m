@@ -30,9 +30,7 @@ static NSString *const kBusinessCellIdentifier = @"BusinessCellIdForBBTableViewC
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     [_businessList removeObjectAtIndex:indexPath.row];
     
-    NSNumber *indexPathToDelete = [NSNumber numberWithUnsignedInteger:indexPath.row];
-    
-    [tableView deleteRowsAtIndexPaths:@[indexPathToDelete] withRowAnimation:UITableViewRowAnimationTop];
+    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
 }
 
 #pragma mark - UITableViewDataSource methods
