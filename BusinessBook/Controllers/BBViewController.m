@@ -7,7 +7,8 @@
 //
 
 #import "BBViewController.h"
-#import "Models/BBBusinessModel.h"
+#import "BBBusinessModel.h"
+#import "BBTableViewController.h"
 
 @interface BBViewController ()
 
@@ -19,11 +20,18 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view, typically from a nib.
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"List" style:UIBarButtonItemStylePlain target:self action:@selector(showBusinessBook)];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    BBTableViewController *t = (BBTableViewController *)segue.destinationViewController;
+    
+    t.businessList = businessList;
 }
 
 - (IBAction)employeesAmountChanged:(UIStepper *)sender {
@@ -41,13 +49,7 @@
 
 /*! @brief Shows the current list of business on runtime. */
 - (void)showBusinessBook {
-    NSMutableString *businessBook = [NSMutableString stringWithString:@"\n******* Listing all companies *******\n\n"];
-    
-    for (BBBusinessModel *b in businessList) {
-        [businessBook appendString:[NSString stringWithFormat:@"The company %@ has %d employees.\n", b.name, b.employeesAmount]];
-    }
-    
-    NSLog(@"%@", businessBook);
+    [self performSegueWithIdentifier:@"HomeToBusinessBookSegue" sender:self];
 }
 
 - (IBAction)saveNewCompany:(id)sender {
@@ -56,7 +58,6 @@
     BBBusinessModel *b = [[BBBusinessModel alloc] initWithName:_businessNameField.text andEmployeesAmount:[_employeesAmountField.text intValue]];
     
     [self addBusiness:b];
-    [self showBusinessBook];
     
     _successAlertField.alpha = 0;
     
