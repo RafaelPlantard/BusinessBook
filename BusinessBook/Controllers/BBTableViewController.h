@@ -12,6 +12,6 @@
 @interface BBTableViewController : UITableViewController
 
 /*! @brief The list of business. */
-@property (nonatomic, retain) NSMutableArray *businessList;
+@property (nonatomic, assign) NSMutableArray *businessList;
 
 @end
